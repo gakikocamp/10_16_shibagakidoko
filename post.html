@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>KINOKOCAMP - AR CAMPING</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  <!-- グーグルマップAPI -->
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyBunFa8M5cUXVfE2ewS5ZCueUIh-AxtB5Y&language=ja"></script>
+
+</head>
+
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">KINOKO CAMP Inc.</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">VRCAMP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ヘッダー -->
+  <header class="masthead" style="background-image: url('img/post-bg1.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>未知のキャンプ場へいこう</h1>
+            <h2 class="subheading">キャンプ場VR体験「VR CAMPING」</h2>
+
+            <!-- 更新日時消しました -->
+            <!-- <span class="meta"><small>Updated by
+                <a href="#">KINOKO CAMP</a>
+                on January 24, 2019</small></span>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 本文 -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <h2 class="section-heading">おすすめキャンプ場３選</h2>
+
+          <p>仕事や悪天候でキャンプに行きたいけど、日々でモヤモヤすることってありませんか？
+            そんな方にオススメなのがキャンプ場に瞬間移動したかのようなリアルなキャンプシーンを疑似体験できるVR。
+            つかの間の休息にいかがですか？</p>
+
+          <p>グーグルストリートビューを使用し、全国の有名キャンプ場へ瞬間移動！今回はおすすめの３キャンプ場をピックアップ</p>
+
+
+          <h2 class="section-heading">第１位 ふもとっぱらキャンプ場（静岡県）</h2>
+
+          <!-- サンプル画像を入れないことにした -->
+          <!-- <a href="#"> -->
+          <!-- <img class="img-fluid" src="img/post-sample-image1.jpg" alt=""> -->
+          <!-- </a> -->
+
+          <span class="caption text-muted">自然を感じ体験できる大草原のキャンプ場</span>
+
+          <!-- グーグルマップを付ける -->
+          <div id="map" style="width:100%; height:200px"></div>
+
+          <!-- wrapperエリア -->
+          <div id="wrapper">
+
+            <!-- ストリートビュー表示 -->
+            <div id="svp_area">
+              <div id="svp" style="width:100%; height:450px"></div>
+            </div> <!-- ストリートビュー表示ここまで -->
+
+
+            <!-- テキストエリア -->
+            <div id="map_footer">
+
+              <!-- <div id="text_area"> -->
+              <!-- <h3>大草原のキャンプ場</h3> -->
+              <!-- <p>八丁堀駅（はっちょうぼりえき）は、東京都中央区八丁堀にある、東京地下鉄（東京メトロ）・東日本旅客鉄道（JR東日本）の駅である。</p> -->
+              <!-- </div> -->
+
+              <!-- マップ表示 -->
+              <div id="map2" style="width:100%; height:100px"></div>
+
+            </div>
+            <!-- テキストエリア終了 -->
+
+          </div> <!-- wrapperエリア終了 -->
+
+          <p>自然を感じ体験できる大草原のキャンプ場</p>
+
+          <p>富士山を眺めることのできる大草原、とても広大な芝生エリアが広がる場内、木々に囲まれたキャンプサイトなど開放的にすごしていただけます。
+            テントサイトのほか、貸し別荘のような宿泊施設もあり初心者の方やファミリーまで気軽に利用していただけます。
+            家族や友人と、のんびりとした時間を過ごしてみてはいかがでしょう。</p>
+
+          <!-- <blockquote class="blockquote"> -->
+          <p>●宿泊施設●
+            オートキャンプサイト・・・3,500円＋タープ一張1,000円</p>
+          <p>●その他●
+            入場料・・・大人500円、中高生300円、小学生以下無料.</p>
+          <!-- </blockquote> -->
+
+          <p>住所：
+            静岡県富士宮市麓156</p>
+
+          <h2 class="section-heading">第二位　ボイボイキャンプ場（大分県）</h2>
+
+          <p>○○○○○○○○</p>
+
+          <a href="#">
+            <img class="img-fluid" src="img/post-sample-image2.jpg" alt="">
+          </a>
+          <span class="caption text-muted">大分久住のキャンプ場</span>
+
+          <p>○○○○○○○○</p>
+
+          <p>○○○○○○○○</p>
+
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer ここは丸々コピペのおしゃれフッター -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; KINOKOCAMP 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+
+  <script>
+
+    // １位のキャンプ場の地図
+    var MyLatLng = new google.maps.LatLng(35.400028, 138.564639);
+    var Options = {
+      zoom: 17,      //地図の縮尺値
+      center: MyLatLng,    //地図の中心座標
+      mapTypeId: 'satellite'   //地図の種類
+    };
+    var map = new google.maps.Map(document.getElementById('map'), Options);
+
+
+    // ランキング1位のキャンプ場のストリートビュー
+    // 変数群
+    var map2, svp;
+    //--------------------------------------------
+    //初期ページを読み込んだ時に実行する関数
+    //--------------------------------------------
+    function initialize() {
+      // 緯度・経度変数
+      var latlng = new google.maps.LatLng(35.400028, 138.564639);
+      // 地図のオプション設定変数
+      var myOptions = {
+        // カメラの向き
+        heading: -20,
+        // 初期のズーム レベル
+        zoom: 8,
+        // 地図の中心点
+        center: latlng,
+        // 地図タイプ
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      //地図オブジェクト生成
+      map2 = new google.maps.Map(document.getElementById('map2'), myOptions);
+      // ストリートビューオブジェクト生成
+      svp = new google.maps.StreetViewPanorama(
+        document.getElementById('svp'), {
+          position: map2.getCenter()
+        });
+      // ストリートビューオブジェクト詳細設定
+      svp.setPov({ heading: 150, pitch: 0, zoom: 0 });
+      // マップとストリートビューを一致させる為の記述
+      map2.setStreetView(svp);
+    }
+
+    // function initialize()
+    // ページを読み込んだ時にinitialize()を実行
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    // // 回転関数をいれたが動かなかった
+
+    // function rotate() {
+    //   // カメラの位置取得
+    //   var pov = svp.getPov();
+    //   var _heading = pov['heading'];
+    //   var _pitch = pov['pitch'];
+    //   var _zoom = pov['zoom'];
+    //   // 位置をずらす
+    //   _heading = _heading + 0.1;
+    //   // 位置情報をセット(一番大事)
+    //   svp.setPov({
+    //     heading: _heading, pitch: _pitch, zoom: _zoom
+    //   });
+    // }
+
+
+  </script>
+
+
+</body>
+
+</html>
